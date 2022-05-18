@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="4.0" method="upgrade">
+    <name>com_basiscout</name>
+    <creationDate>2022-05-16</creationDate>
+    <copyright>2022 scoutcodera</copyright>
+    <license>GNU General Public License versione 2 o successiva; vedi LICENSE.txt</license>
+    <author>Giorgio</author>
+    <authorEmail>gacompa@gmail.com</authorEmail>
+    <authorUrl>http://scoutcodera.it</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>COM_BASISCOUT_XML_DESCRIPTION</description>
+    <namespace path="src">Scoutcodera\Component\Basiscout</namespace>
+    
+    
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update> <!-- Runs on update -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/update.mysql.utf8.sql</file>
+        </sql>
+    </update>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    
+
+    <files folder="site">
+        <folder>src</folder>
+        <folder>forms</folder>
+        <folder>tmpl</folder>
+    </files>
+    <media destination="com_basiscout" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+        <filename>joomla.asset.json</filename>
+    </media>
+    <languages folder="site/languages">
+        
+			<language tag="en-GB">en-GB/com_basiscout.ini</language>
+			<language tag="it-IT">it-IT/com_basiscout.ini</language>
+    </languages>
+    <administration>
+        <menu>COM_BASISCOUT</menu>
+        <submenu>
+            
+			<menu link="option=com_basiscout&amp;view=basiscout" view="basiscout" alt="Basiscout/Basiscout">COM_BASISCOUT_TITLE_BASISCOUT</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <folder>forms</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+            <folder>services</folder>
+            <folder>presets</folder>
+            <folder>sql</folder>
+        </files>
+        <languages folder="administrator/languages">
+            
+			<language tag="en-GB">en-GB/com_basiscout.ini</language>
+			<language tag="en-GB">en-GB/com_basiscout.sys.ini</language>
+			<language tag="it-IT">it-IT/com_basiscout.ini</language>
+			<language tag="it-IT">it-IT/com_basiscout.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+        <fields name="params">
+            <fieldset name="component">
+                <field name="save_history" default="0" />
+            </fieldset>
+        </fields>
+    </config>
+    <plugins>
+    </plugins>
+    
+
+    <updateservers>
+        <server type="extension" priority="1" name="com_basiscout">https://www.component-creator.com/index.php?task=builder.preupdatecheckhook&amp;option=com_combuilder&amp;component=NzM3NjUtMjAyNjk1</server>
+    </updateservers>
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldprefix="Scoutcodera\Component\Basiscout\Administrator\Field">
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="ordering"/>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="JGLOBAL_FIELD_CREATED_BY_LABEL" description="JGLOBAL_FIELD_CREATED_BY_DESC" hidden="true" hint="COM_BASISCOUT_FORM_LBL_BASESCOUT_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="JGLOBAL_FIELD_MODIFIED_BY_LABEL" description="JGLOBAL_FIELD_MODIFIED_BY_DESC" hidden="true" hint="COM_BASISCOUT_FORM_LBL_BASESCOUT_MODIFIED_BY"/>
+    <field name="nome" filter="safehtml" type="text" label="COM_BASISCOUT_FORM_LBL_BASESCOUT_NOME" description="COM_BASISCOUT_FORM_DESC_BASESCOUT_NOME" hint="Nome della base scout"/>
+    <field name="luogo" filter="safehtml" type="text" label="COM_BASISCOUT_FORM_LBL_BASESCOUT_LUOGO" description="COM_BASISCOUT_FORM_DESC_BASESCOUT_LUOGO" hint="COM_BASISCOUT_FORM_LBL_BASESCOUT_LUOGO"/>
+    <field name="descrizione" filter="safehtml" type="textarea" label="COM_BASISCOUT_FORM_LBL_BASESCOUT_DESCRIZIONE" description="COM_BASISCOUT_FORM_DESC_BASESCOUT_DESCRIZIONE" hint="COM_BASISCOUT_FORM_LBL_BASESCOUT_DESCRIZIONE"/>
+    <field name="posti_interno" label="COM_BASISCOUT_FORM_LBL_BASESCOUT_POSTI_INTERNO" description="COM_BASISCOUT_FORM_DESC_BASESCOUT_POSTI_INTERNO" hint="COM_BASISCOUT_FORM_LBL_BASESCOUT_POSTI_INTERNO"/>
+    <field name="posti_esterno" label="COM_BASISCOUT_FORM_LBL_BASESCOUT_POSTI_ESTERNO" description="COM_BASISCOUT_FORM_DESC_BASESCOUT_POSTI_ESTERNO" hint="COM_BASISCOUT_FORM_LBL_BASESCOUT_POSTI_ESTERNO"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>
